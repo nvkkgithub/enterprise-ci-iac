@@ -25,26 +25,28 @@ This repository uses below two Hashicorp tools
 #### Packer - Create AMI 
 
 ##### Assumptions:
-* AWS IAM role created with access to VPC - full access, EC2 - full acess and <access-key> and * Access details i.e., 'access-key' and 'secret-key' details will be passed as parameters to create command.
+* AWS IAM role created with access to VPC - full access, EC2 - full acess 
+
+* Access details i.e., 'access-key' and 'secret-key' details will be passed as parameters to create command.
+
+* MAKE file creation in-progress
 
 ```
-cd packer
-make jenkins/master -aws_access_key=<access-key> -aws_secret_key=<secret-key>
-make jenkins/slave -aws_access_key=<access-key> -aws_secret_key=<secret-key>
-
+make jenkins-master-ami/create -aws_access_key=<access-key> -aws_secret_key=<secret-key>
+make jenkins-slave-ami/create -aws_access_key=<access-key> -aws_secret_key=<secret-key>
 ```
 
 ### Terraform - Provision Infrastructure
 
 ##### Assumptions:
 * AWS IAM role created with access to VPC-FullAccess, EC2-FullAccess, S3-Read/Write access. 
-* Access details i.e., 'access-key' and 'secret-key' details will be passed as parameters to create command.
+* Access details i.e., 'access-key' and 'secret-key' are configured with profile name 'vk_env_admin_user'
+* Use below command to provion.
 
 ```
-cd terraform
-make jenkins-master/infra-stack -aws_access_key=<access-key> -aws_secret_key=<secret-key>
-make jenkins-master/ec2-provision -aws_access_key=<access-key> -aws_secret_key=<secret-key>
-make jenkins-slave/ec2-provision -aws_access_key=<access-key> -aws_secret_key=<secret-key>
-make bastion-host/provision -aws_access_key=<access-key> -aws_secret_key=<secret-key>
+make jenkins-master/create
+make jenkins-master/destroy
+make jenkins-slave/create
+make jenkins-slave/destroy
 ```
 
