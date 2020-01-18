@@ -1,0 +1,16 @@
+#compiled files
+*.tfstate
+*.tfstate.backup
+*.binary
+*tfplan.json
+*.lock.info
+*.lock
+#Modules Directory
+.terraform/
+*.txt
+*.csv
+
+*.log
+credentials
+credentials*
+*ec2pair

@@ -1,0 +1,45 @@
+{
+    "builders": [
+        {
+            "access_key": "{{user `aws_access_key`}}",
+            "secret_key": "{{user `aws_secret_key`}}",
+            "ami_name": "{{user `aws_ami_name`}}",
+            "region": "{{user `aws_region`}}",
+            "source_ami": "{{user `aws_ami_id`}}",
+            "instance_type": "{{user `aws_instance_type`}}",
+            "ssh_username": "{{user `aws_ami_username`}}",
+            "type": "amazon-ebs",
+            "associate_public_ip_address" : true
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "script": "./scripts/provisioners-pre.sh"
+        },
+        {
+            "type": "file",
+            "source": "./resources/cli_createnode_n_connect.sh",
+            "destination": "{{user `remote_tmp_folder`}}/cli_createnode_n_connect.sh"
+        },
+        {
+            "type": "file",
+            "source": "./resources/jenkinsslave.service",
+            "destination": "{{user `remote_tmp_folder`}}/jenkinsslave.service"
+        },
+        {
+            "type": "file",
+            "source": "./resources/ec2_startup_init_script.sh",
+            "destination": "{{user `remote_tmp_folder`}}/ec2_startup_init_script.sh"
+        },
+        {
+            "type": "file",
+            "source": "./resources/slave-agent-register.sh",
+            "destination": "{{user `remote_tmp_folder`}}/slave-agent-register.sh"
+        },
+        {
+            "type": "shell",
+            "script": "./scripts/provisioners-post.sh"
+        }
+    ]
+}
