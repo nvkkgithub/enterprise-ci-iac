@@ -1,41 +1,41 @@
 ## Enterprise CI using Infrastructure As Code
 This repository contains code to provision infrastructure on AWS cloud for Enterprise CI platform.
 
-#### Objective: 
+### Objective: 
 * Provision Highly scalable, available and fault-tolerant enterprise-ci platform.
 * Provide the monitoring dashboards and alerts.
 * Provide consumable CI pipeline with Pipeline As Code.
 
-#### Practices/Tools
+### Practices/Tools
 
-##### Packer
+#### Packer
 * Create AMI with required softwares as needed for Jenkins Master and Slave. 
 
 * Create AMI for SONAR, ELK stack.
 
-##### Terraform
+#### Terraform
 
 * Terraform - Provision infra  with templates i.e., 'Infrastack', 'EC2-ALB-stack', 'EC2'. This will enable reusability.
 
 
-##### Groovy Template : Pipeline As Service
+#### Groovy Template : Pipeline As Service
 * Consumable CI pipeline as a service for all applicable maven and java projects.
 
 (https://github.com/nvkkgithub/enterprise-ci-shared-libs.git)
 
 
-### AWS - Deployment Architecture
+## AWS - Deployment Architecture
 ![Enterprise-CI AWS deployment architecture](EnterpriseCI-AWS-Deployment-Architecture.jpg)
 
-### ELK - Monitoring Dashboards
+## ELK - Monitoring Dashboards
 
-#### Dashboard by Status
+### Dashboard by Status
 ![Dashboard Search](Dashboard_Search.png)
 
-#### Dashboard by Projects
+### Dashboard by Projects
 ![Dashboard By Projects](Dashboard_GrpBy_Project.png)
 
-#### Dashboard by Status
+### Dashboard by Status
 ![Dashboard By Status](Dashboard_GrpBy_status.png)
 
 ### Usage
