@@ -13,13 +13,10 @@ This repository contains code to provision infrastructure on AWS cloud for Enter
 
 * Create AMI for SONAR, ELK stack.
 
-* [Packer](packer/README.md)
-
 ##### Terraform
 
 * Terraform - Provision infra  with templates i.e., 'Infrastack', 'EC2-ALB-stack', 'EC2'. This will enable reusability.
 
-* [Terraform code](terraform/README.md)
 
 ##### Groovy Template : Pipeline As Service
 * Consumable CI pipeline as a service for all applicable maven and java projects.
