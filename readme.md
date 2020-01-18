@@ -1,12 +1,30 @@
 ## Enterprise CI using Infrastructure As Code
 This repository contains code to provision infrastructure on AWS cloud for Enterprise CI platform.
 
-This repository uses below two Hashicorp tools
-* Packer - for creating AMIs with required softwares (Java, Maven, Jenkins..etc) as needed for Jenkins Master and Slave. 
-** For more details refer to "/packer/readme.md" folder.
+#### Objective: 
+* Provision Highly scalable, available and fault-tolerant enterprise-ci platform.
+* Provide the monitoring dashboards and alerts.
+* Provide consumable CI pipeline with Pipeline As Code.
 
-* Terraform - to provision different types of infrastrcuture individually i.e., 'Infrastack', 'EC2-ALB-stack', 'EC2'. This will enable reusability.
-** For more infromation refer
+#### Practices/Tools
+
+##### Packer
+* Create AMI with required softwares as needed for Jenkins Master and Slave. 
+
+* Create AMI for SONAR, ELK stack.
+
+* [Packer](packer/README.md)
+
+##### Terraform
+
+* Terraform - Provision infra  with templates i.e., 'Infrastack', 'EC2-ALB-stack', 'EC2'. This will enable reusability.
+
+* [Terraform code](terraform/README.md)
+
+##### Groovy Template : Pipeline As Service
+* Consumable CI pipeline as a service for all applicable maven and java projects.
+
+(https://github.com/nvkkgithub/enterprise-ci-shared-libs.git)
 
 
 ### AWS - Deployment Architecture
