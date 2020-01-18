@@ -12,6 +12,14 @@ This repository uses below two Hashicorp tools
 ### AWS - Deployment Architecture
 ![Enterprise-CI AWS deployment architecture](EnterpriseCI-AWS-Deployment-Architecture.jpg)
 
+### ELK - Monitoring Dashboards
+
+#### Dashboard by Projects
+![Dashboard By Projects](Dashboard_by_Project.png)
+
+#### Dashboard by Status
+![Dashboard By Status](Dashboard_by_status.png)
+
 ### Usage
 
 #### Packer - Create AMI 

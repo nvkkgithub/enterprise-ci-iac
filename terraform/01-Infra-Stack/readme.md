@@ -7,9 +7,6 @@ Provision the below AWS environment using terraform scripts
 * Step-4, Provision Subnet-C (Jenkins-Slave-CIDR) and Attach access from/to Jenkins-Master-CIDR only.
 
 
-* Step-2, Provision AWS load balancer AutoScaling Group, EC2 instances using terraform scripts
-* Step-3, Provision ALB, Listeners, Target Group and Attach to AutoScaling Group
-
 ### Validate and Format commands
 ```
 terraform validate
