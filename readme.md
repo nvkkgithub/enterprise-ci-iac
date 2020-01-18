@@ -14,11 +14,14 @@ This repository uses below two Hashicorp tools
 
 ### ELK - Monitoring Dashboards
 
+#### Dashboard by Status
+![Dashboard Search](Dashboard_Search.png)
+
 #### Dashboard by Projects
-![Dashboard By Projects](Dashboard_by_Project.png)
+![Dashboard By Projects](Dashboard_GrpBy_Project.png)
 
 #### Dashboard by Status
-![Dashboard By Status](Dashboard_by_status.png)
+![Dashboard By Status](Dashboard_GrpBy_status.png)
 
 ### Usage
 

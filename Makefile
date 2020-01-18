@@ -1,8 +1,9 @@
 jenkins-master-ami/create:
-	@echo "*** TODO **** User packer build command directly from 'packer' folder."
+	@cd packer && make jenkins-master-ami/create
 
 jenkins-slave-ami/create:
 	@echo "*** TODO **** User packer build command directly from 'packer' folder."
+	@cd packer && make jenkins-slave-ami/create
 
 jenkins-master/create: ## Create Jenkins Master
 	@cd terraform && make jenkins-master/create

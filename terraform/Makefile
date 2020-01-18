@@ -19,10 +19,10 @@ jenkins-master/destroy: ## Destroy Jenkins Master
 jenkins-slave/create: ## Create Jenkins Slave
 	@echo "Creating Jenkins Slave and Auto Attach to Jenkins Master"
 	@cd 03-Ec2 && terraform init
-	@cd 03-Ec2 && terraform apply --var-file=jenkins-slave/terraform.tfvars
+	@cd 03-Ec2 && terraform apply --var-file=jenkins-slave/terraform.tfvars --auto-approve
 
 jenkins-slave/destroy: ## Create Jenkins Slave
 	@echo "Destroying Jenkins Slave"
 	@cd 03-Ec2 && terraform init
-	@cd 03-Ec2 && terraform destroy --var-file=jenkins-slave/terraform.tfvars
+	@cd 03-Ec2 && terraform destroy --var-file=jenkins-slave/terraform.tfvars --auto-approve
 
