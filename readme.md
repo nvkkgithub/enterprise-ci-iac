@@ -41,7 +41,7 @@ make jenkins-slave-ami/create -aws_access_key=<access-key> -aws_secret_key=<secr
 ##### Assumptions:
 * AWS IAM role created with access to VPC-FullAccess, EC2-FullAccess, S3-Read/Write access. 
 * Access details i.e., 'access-key' and 'secret-key' are configured with profile name 'vk_env_admin_user'
-* Use below command to provion.
+* Use below command to provision.
 
 ```
 make jenkins-master/create
