@@ -19,9 +19,8 @@ restore_jenkins_from_s3(){
     aws s3 cp "s3://vk-test-jenkins-backup/jenkins-master-backup/${BACKUP_FILE_NAME}" ./
     unzip ${BACKUP_FILE_NAME}
 
-    mv ~/.jenkins ~/.jenkins_bak
-    rm -rf ~/.jenkins
-    mv tmp/jenkins-master-backup ~/.jenkins
+    mv /var/jenkins /var/jenkins_bak
+    mv tmp/jenkins-master-backup /var/jenkins
     
     # restart jenkins
 

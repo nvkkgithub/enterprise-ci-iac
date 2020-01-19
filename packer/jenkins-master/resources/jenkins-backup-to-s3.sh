@@ -15,7 +15,7 @@ backup_jenkins_master_to_s3(){
     # move to temp backup
     mkdir -p /var/jenkins_backup_process
     cd /var/jenkins_backup_process
-    rsync -ar ~/.jenkins/* ${MASTER_BACK_UP_FOLDER}/
+    rsync -ar /var/jenkins/* ${MASTER_BACK_UP_FOLDER}/
     zip -r ${BACKUP_FILE_NAME} ${MASTER_BACK_UP_FOLDER}/
 
     # aws s3 cp "${MASTER_BACK_UP_FOLDER}" s3://vk-test-jenkins-backup/jenkins-master-backup --recursive
