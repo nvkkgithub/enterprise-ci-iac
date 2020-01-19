@@ -12,7 +12,6 @@ resource "aws_launch_template" "vk_aws_asg_launch_template" {
     associate_public_ip_address = var.ec2_associate_public_ip
     security_groups             = ["${aws_security_group.vk_ec2_sg.id}"]
     subnet_id                   = "${var.vk_subnet_b1_value}"
-    // subnet-0811fea42c4eefc6a
   }
 
   tag_specifications {
@@ -24,9 +23,6 @@ resource "aws_launch_template" "vk_aws_asg_launch_template" {
   }
 
   user_data = "${base64encode(file("${var.user_data_script_file}"))}"
-
-  // http://169.254.169.254/latest/user-data
-  // https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-instance-metadata.html
 }
 resource "aws_autoscaling_group" "vk_aws_launch_grp" {
   availability_zones = ["${var.vk_subnet_b1_az_value}"]
@@ -48,7 +44,7 @@ resource "aws_autoscaling_group" "vk_aws_launch_grp" {
     },
     {
       key                 = "Name"
-      value               = "${var.vk_aws_ec2_alb_tag}_asg"
+      value               = "${var.vk_aws_ec2_alb_tag}_ec2_asg"
       propagate_at_launch = true
     }
   ]

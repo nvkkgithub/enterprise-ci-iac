@@ -26,3 +26,12 @@ jenkins-slave/destroy: ## Create Jenkins Slave
 	@cd 03-Ec2 && terraform init
 	@cd 03-Ec2 && terraform destroy --var-file=jenkins-slave/terraform.tfvars --auto-approve
 
+bastion-server/create: ## Create Bastion Server
+	@echo "Destroying Jenkins Slave"
+	@cd 03-Ec2 && terraform init
+	@cd 03-Ec2 && terraform apply --var-file=bastion-server/terraform.tfvars
+
+bastion-server/destroy: ## Destroy Bastion Server
+	@echo "Destroying Jenkins Slave"
+	@cd 03-Ec2 && terraform init
+	@cd 03-Ec2 && terraform destroy --var-file=bastion-server/terraform.tfvars

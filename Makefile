@@ -17,3 +17,8 @@ jenkins-slave/create: ## Create Jenkins Slave
 jenkins-slave/destroy: ## Destroy Jenkins Slave
 	@cd terraform && make jenkins-slave/destroy
 
+bastion-server/create: ## Destroy Jenkins Slave
+	@cd terraform && make bastion-server/create
+
+bastion-server/destroy: ## Destroy Bastion Server
+	@cd terraform && make bastion-server/destroy
