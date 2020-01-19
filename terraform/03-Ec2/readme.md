@@ -8,6 +8,7 @@ Provision the EC2 instance and security groups
 ```
 terraform validate
 terraform fmt
+terraform init
 ```
 ### Initialize with s3 bucket
 ```

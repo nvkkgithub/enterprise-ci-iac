@@ -1,6 +1,6 @@
 current_environment               = "test"
 region_name                       = "us-east-2"
-ec2_ami_id                        = "ami-0e90c17a54d280530"
+ec2_ami_id                        = "ami-00224859d49bebbc6"
 ec2_ami_key_pair                  = "vk-jenkins-ec2-slave-pair"
 ec2_instance_type                 = "t3.medium"
 ec2_tag_name                      = "jenkins-slave-2"
