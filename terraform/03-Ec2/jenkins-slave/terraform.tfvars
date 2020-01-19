@@ -10,5 +10,5 @@ ec2_ssh_ingress_cidr_value        = "10.255.0.0/24"
 ec2_ingress_appln_port_cidr_value = "10.255.0.0/24"
 ec2_ingress_port_from             = "5000"
 ec2_ingress_port_to               = "8000"
-enable_public_ip_address          = false
+enable_public_ip_address          = true
 user_data_script_file             = "jenkins-slave/init-scripts.sh"
