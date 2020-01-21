@@ -22,3 +22,9 @@ bastion-server/create: ## Destroy Jenkins Slave
 
 bastion-server/destroy: ## Destroy Bastion Server
 	@cd terraform && make bastion-server/destroy
+
+sonar-server/create: ## Create Sonar n ELK server
+	@cd terraform && make sonar-server/create
+
+sonar-server/destroy: ## Destroy Sonar n ELK server
+	@cd terraform && make sonar-server/destroy
